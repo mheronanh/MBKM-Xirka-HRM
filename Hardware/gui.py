@@ -129,7 +129,7 @@ class VideoThread(QtCore.QThread):
             
             if found_face and not tracker_init:
                 face_box = faces[0]
-                tracker = cv2.TrackerMOSSE_create()
+                tracker = cv2.legacy.TrackerMOSSE_create()
                 tracker.init(img, tuple(face_box))
                 tracker_init = True
             
